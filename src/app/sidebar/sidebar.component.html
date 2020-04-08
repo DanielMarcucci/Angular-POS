@@ -1,0 +1,41 @@
+<app-nav (click)="toggleClassOpen()" [classAplied]="classAplied"></app-nav>
+<nav class="bg-gray-800 sidebar mobileMenu" [class.open]="classAplied">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column" *ngFor="let option of options">
+      <li class="nav-item">
+        <a href="#{{ option.id_menu }}" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle collapsed">{{ option.title }}</a>
+        <ul class="list-unstyled collapse" id="{{ option.id_menu }}">
+          <li>
+            <a class="nav-item text-white pl-4">Home 1</a>
+          </li>
+          <li>
+            <a class="nav-item text-white pl-4">Home 2</a>
+          </li>
+          <li>
+            <a class="nav-item text-white pl-4">Home 3</a>
+          </li>
+        </ul>
+    </li>
+      <!--<li class="active">
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">Home</a>
+        <ul class="list-unstyled collapse" id="homeSubmenu" style="">
+            <li>
+                <a href="#">Home 1</a>
+            </li>
+            <li>
+                <a href="#">Home 2</a>
+            </li>
+            <li>
+                <a href="#">Home 3</a>
+            </li>
+        </ul>
+    </li>-->
+      <!--<li class="nav-item">
+        <a class="nav-link" routerLink="{{ option.url }}">
+          <span data-feather="home"></span>
+          {{ option.title }}
+        </a>
+      </li>-->
+    </ul>
+  </div>
+</nav>

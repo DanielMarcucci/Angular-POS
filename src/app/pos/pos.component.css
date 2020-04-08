@@ -1,0 +1,98 @@
+.fixed thead {
+ position: absolute;
+ width: 100%;
+}
+
+/*
+ * PARA DEJAR ESTATICA LOS THEAD Y TFOOT DE UNA TABLA
+ */
+.table-fixed {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.table-fixed thead tr:nth-child(1) th,
+.table-fixed thead tr:nth-child(1) td {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  border: 0;
+  z-index: 10;
+}
+
+.table-fixed tbody {
+  font-size: 12px;
+}
+
+.table-fixed tfoot tr:nth-child(1) th,
+.table-fixed tfoot tr:nth-child(1) td {
+  background-color: white;
+  position: sticky;
+  bottom: 0;
+  border: 0;
+  z-index: 10;
+}
+
+/*
+ * PARA QUE EL TAMAÑO DE LA IMAGEN NO DEPENDA DE LOS PIXELES ASIGNADOR Y DEJAR CUADRADA LA IMAGEN
+ */
+.img-cover {
+  object-fit: cover;
+  height: 70px;
+  width: 70px;
+}
+
+/*
+ * MAQUETA
+ */
+.logo {
+  height: 50px
+}
+
+.products {
+  background-color: #f4f2f2;
+}
+
+.btn-number-info {
+  height: 70px;
+}
+
+/*
+ *
+ */
+.btn-number-info {
+  font-size: 35px !important;
+  color: #fff;
+  background-color: #008fc7;
+  border-color: #008fc7;
+}
+
+.btn-number-info:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  background-color: #00668f;
+  border-color: #005a7e;
+}
+
+.btn-number-info:focus, .btn-number-info.focus {
+  box-shadow: 0 0 0 0 rgba(38, 143, 255, 0.5);
+}
+
+.btn-number-info.disabled, .btn-number-info:disabled {
+  color: #fff;
+  background-color: #008fc7;
+  border-color: #008fc7;
+}
+
+.btn-number-info:not(:disabled):not(.disabled):active, .btn-number-info:not(:disabled):not(.disabled).active,
+.show > .btn-number-info.dropdown-toggle {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.btn-number-info:not(:disabled):not(.disabled):active:focus, .btn-number-info:not(:disabled):not(.disabled).active:focus,
+.show > .btn-number-info.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0 rgba(38, 143, 255, 0.5);
+}

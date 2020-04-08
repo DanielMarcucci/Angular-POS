@@ -1,0 +1,149 @@
+<form class="bg-white h-100 p-3 text-dark" (button)='false' [formGroup]="posForm">
+  <div class="form-group h-100">
+    <div class="form-row h-100">
+      <div class="col-3 h-100">
+        <div class="form-row h-100">
+          <div class="d-inline-flex flex-column h-100 w-100">
+            <div class="mb-auto table-responsive h-100 border border-primary">
+              <table class="table table-fixed">
+                <thead>
+                  <tr>
+                    <input type="hidden" disabled>
+                    <td scope="col" colspan="3">
+                      <h4 class="px-1">Orden No. 5568</h4>
+                      <div class="form-row px-1">
+                        <div class="col-auto font-weight-bold">Nombre:</div>
+                        <div class="col">Vivian González</div>
+                      </div>
+                      <div class="form-row px-1">
+                        <div class="col-auto font-weight-bold">NIT:</div>
+                        <div class="col">98765432-1</div>
+                      </div>
+                      <div class="form-row px-1">
+                        <div class="col-auto font-weight-bold">Dirección:</div>
+                        <div class="col">Plaza Barrios Zona 1 09-99, Guatemala</div>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let number of '12345678901234567890'.split('')">
+                    <td>
+                      <div class="form-row">
+                        <div class="col-auto">
+                          <img src="https://images-na.ssl-images-amazon.com/images/I/61jsSnf-JsL._SY355_.jpg" class="img-fluid img-cover">
+                        </div>
+                        <div class="col">
+                          <div class="form-row">
+                            <div class="col">
+                              <span class="d-block">Camisa</span>
+                              <span class="d-block">Cantidad: {{ number }}</span>
+                            </div>
+                            <div class="col text-right">
+                              <button class="btn btn-danger btn-sm">X</button>
+                            </div>
+                          </div>
+                          <span class="d-block">Lavado y Planchado</span>
+                          <span class="d-block text-right font-weight-bold">Q 20.00</span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <input type="hidden" disabled>
+                    <td scope="col" colspan="3">
+                      <div class="form-row">
+                        <table class="table table-sm mb-0">
+                          <tr>
+                            <td>Subtotal:</td>
+                            <td class="text-right font-weight-bold">Q</td>
+                            <td class="text-right font-weight-bold">138.00</td>
+                          </tr>
+                          <tr>
+                            <td>Descuento:</td>
+                            <td class="text-right font-weight-bold">Q</td>
+                            <td class="text-right font-weight-bold">0.00</td>
+                          </tr>
+                          <tr>
+                            <td>Total:</td>
+                            <td class="text-right font-weight-bold">Q</td>
+                            <td class="text-right font-weight-bold">138.00</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <!--<div class="form-row">
+                        <div class="col-auto">Subtotal: </div>
+                        <div class="col"></div>
+                        <div class="col-2">Q</div>
+                        <div class="col-3 text-right">138.00</div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-auto">Descuento: </div>
+                        <div class="col"></div>
+                        <div class="col-2">Q</div>
+                        <div class="col-3 text-right">0.00</div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-auto">Total: </div>
+                        <div class="col"></div>
+                        <div class="col-2">Q</div>
+                        <div class="col-3 text-right">138.00</div>
+                      </div>-->
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block font-weight-bold mt-2" type="button">Generar Orden</button>
+            <button class="btn btn-lg btn-success btn-block font-weight-bold" type="button">Cobrar</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-9 h-100 pl-3">
+        <div class="form-row h-100">
+          <div class="d-inline-flex flex-column h-100 w-100">
+            <div class="form-row">
+              <div class="col-6 col-lg-3 mb-2 text-center">
+                <img src="https://steam.com.gt/wp-content/uploads/2018/12/logo-banner.jpg" class="img-fluid logo" alt="Responsive image">
+              </div>
+              <div class="col-6 col-lg-3 mb-2">
+                <button class="btn btn-lg btn-success btn-block font-weight-bold" type="button">Corte de Caja</button>
+              </div>
+              <div class="col-6 col-lg-3 mb-2">
+                <button class="btn btn-lg btn-info btn-block font-weight-bold" type="button">Consultar</button>
+              </div>
+              <div class="col-6 col-lg-3 mb-2">
+                <button class="btn btn-lg btn-success btn-block font-weight-bold" type="button">Nueva Orden</button>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col mb-2 p-2" *ngFor="let number of '1234567890'.split('')">
+                <button class="btn btn-lg btn-number-info btn-block btn-number" type="button">{{ number }}</button>
+              </div>
+            </div>
+            <div class="mb-auto form-row overflow-auto products py-3 mx-1 h-100">
+              <div class="col-2 text-center px-3 py-2" *ngFor="let number of '123456789012345678'.split('')">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/61jsSnf-JsL._SY355_.jpg" class="img-fluid img-cover">
+                <span class="d-block">Camisa</span>
+                <span class="d-block">Q {{ number }}.00</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-6 col-lg-3 mt-2">
+                <button class="btn btn-lg btn-primary btn-block font-weight-bold" type="button">Corte de Caja</button>
+              </div>
+              <div class="col-6 col-lg-3 mt-2">
+                <button class="btn btn-lg btn-warning btn-block font-weight-bold" type="button">Exclusiones</button>
+              </div>
+              <div class="col-6 col-lg-3 mt-2">
+                <button class="btn btn-lg btn-success btn-block font-weight-bold" type="button">Subir Foto</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
